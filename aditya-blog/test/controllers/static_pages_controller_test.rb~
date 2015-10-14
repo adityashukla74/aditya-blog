@@ -2,8 +2,8 @@ require 'test_helper'
 
 class StaticPagesControllerTest < ActionController::TestCase
   test "should get home" do
-    get :home //expect the home to be ordinary pages accessed using GET request
-    assert_response :success //response 200
+    get :home 
+    assert_response :success
   end
 
 end

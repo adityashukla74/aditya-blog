@@ -5,5 +5,8 @@ class StaticPagesControllerTest < ActionController::TestCase
     get :home 
     assert_response :success
   end
-
+  test "should get about" do
+   get :about
+   assert_response :success
+  end
 end
