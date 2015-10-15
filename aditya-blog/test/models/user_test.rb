@@ -20,7 +20,7 @@ class UserTest < ActiveSupport::TestCase
   
   test "name shouldn't be too long" do
   @user.email = "a" * 200 + "@gmail.com"
-  assert_ot @user.valid?
+  assert_not @user.valid?
   end
 
   test "email validation should accept valid addresses" do
