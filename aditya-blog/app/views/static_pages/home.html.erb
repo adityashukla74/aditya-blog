@@ -1,3 +1,14 @@
-<% provide(:title, "Home") %> //call provide function and associate "Aditya-Blog" with :title label
-  	<h1>I will take almost 26hours to develope this small app
-    </h1>
+<div class="center jumbotron">
+  <h1>Welcome to Aditya Blog</h1>
+
+  <h2>
+    This is the home page for the
+    <a href="aditya-blog.herokuapp.com">RoR Buttercup Sample App</a>
+    Sample application.
+  </h2>
+
+  <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %> //stub link of the form
+</div>
+
+<%= link_to image_tag("logo.png", alt: "logo"),
+            'aditya-blog.herokuapp.com' %>

@@ -5,10 +5,37 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+<script>
+$(document).ready(function(){
+    $("input").focus(function(){
+    $(this).css("background-color", "#cccccc");
+    });
+    $("input").blur(function(){
+    $("this").css("background-color", "#ffffff");
+    });
+    $("input").focus(function(){
+    $(this).css("background-color", "#cccccc");
+    });
+});
+</script>
 </head>
 <body>
-
+	<header class="navbar navbar-inverse navbar-no-bg" role="navigation">
+      <div class="container">
+        <%= link_to "sample app", '#', id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home",   '#' %></li>
+            <li><%= link_to "About",   '#' %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
 <%= yield %>
 
 </body>
