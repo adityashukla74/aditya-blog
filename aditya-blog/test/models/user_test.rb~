@@ -17,5 +17,16 @@ class UserTest < ActiveSupport::TestCase
   @user.email = "	"
   assert_not @user.valid?
   end
+  
+  test "name shouldn't be too long" do
+  @user.email = "a" * 200 + "@gmail.com"
+  assert_ot @user.valid?
+  end
 
+  test "email validation should accept valid addresses" do
+	valid_addresses = %w[adityashukla74@gmail.com USER@foo. COM
+		anadi.misra@boofoo.xyz dsfnkl+dfks@gdmls.in]
+	assert @user.valid?, "#{valid_address.inspect} should be valid"
+	end
+end
 end
