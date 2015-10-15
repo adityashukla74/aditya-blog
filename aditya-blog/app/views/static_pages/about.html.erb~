@@ -1,4 +1,4 @@
-<% provide(:title, "Aditya-Blog") %> //call provide function and associate "Aditya-Blog" with :title label
+<% provide(:title, "about") %> //call provide function and associate "Aditya-Blog" with :title label
 <!DOCTYPE html>
 	<h1>Aditya Blog</h1>
    	<p> This is the home page for the Aditya Blog</p>
